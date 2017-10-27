@@ -35,9 +35,9 @@ Default French translation for Template.
 
 1. Install the Zabbix agent on your host
 2. Copy zabbix_sbr_job.ps1 in the directory : "C:\Program Files\Zabbix Agent\scripts" (create folder if not exist)
-3. Add the following line to your Zabbix agent configuration file.
-EnableRemoteCommands=1 
-UnsafeUserParameters=1 
+3. Add the following line to your Zabbix agent configuration file.<br>
+EnableRemoteCommands=1 <br>
+UnsafeUserParameters=1 <br>
 UserParameter=sbr[*],powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Program Files\Zabbix Agent\scripts\zabbix_sbr_job.ps1" "$1" "$2"
 4. Import TemplateSymantecBackupExec.xml file into Zabbix.
 5. Associate "Template VEEAM-BACKUP trapper" to the host.
