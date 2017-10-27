@@ -26,9 +26,9 @@ Default French translation for Template.
 
 **-------- Discovery Triggers --------**
 
-[HIGH] => Job has FAILED 
-[AVERAGE] => Job has completed with warning
-[MEDIUM] => No data recovery for 24 hours
+[HIGH] => Job has FAILED <br>
+[AVERAGE] => Job has completed with warning<br>
+[MEDIUM] => No data recovery for 24 hours<br>
 
 
 **-------- Setup --------**
