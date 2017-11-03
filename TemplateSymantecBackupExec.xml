@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>3.4</version>
+    <version>3.0</version>
     <date>2017-10-27T10:17:24Z</date>
     <groups>
         <group>
@@ -32,9 +32,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>service_state[BackupExecAgentBrowser]</key>
-                    <delay>2m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -48,6 +48,11 @@
                     <snmpv3_privpassphrase/>
                     <params/>
                     <ipmi_sensor/>
+					<multiplier>0</multiplier>
+					<formula>1</formula>
+					<delta>0</delta>
+					<delay_flex/>
+					<data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -63,9 +68,6 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
-                    <jmx_endpoint/>
-                    <master_item/>
                 </item>
                 <item>
                     <name>Service Backup Exec Device &amp; Media</name>
@@ -73,9 +75,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>service_state[BackupExecDeviceMediaService]</key>
-                    <delay>2m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -89,6 +91,11 @@
                     <snmpv3_privpassphrase/>
                     <params/>
                     <ipmi_sensor/>
+					<multiplier>0</multiplier>
+					<formula>1</formula>
+					<delta>0</delta>
+					<delay_flex/>
+					<data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -104,9 +111,6 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
-                    <jmx_endpoint/>
-                    <master_item/>
                 </item>
                 <item>
                     <name>Service Backup Exec Job Engine</name>
@@ -114,9 +118,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>service_state[BackupExecJobEngine]</key>
-                    <delay>2m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -130,6 +134,11 @@
                     <snmpv3_privpassphrase/>
                     <params/>
                     <ipmi_sensor/>
+					<multiplier>0</multiplier>
+					<formula>1</formula>
+					<delta>0</delta>
+					<delay_flex/>
+					<data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -145,9 +154,6 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
-                    <jmx_endpoint/>
-                    <master_item/>
                 </item>
                 <item>
                     <name>Backup Exec Management Service</name>
@@ -155,9 +161,9 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>service_state[BackupExecManagementService]</key>
-                    <delay>2m</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
                     <status>0</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
@@ -171,6 +177,11 @@
                     <snmpv3_privpassphrase/>
                     <params/>
                     <ipmi_sensor/>
+					<multiplier>0</multiplier>
+					<formula>1</formula>
+					<delta>0</delta>
+					<delay_flex/>
+					<data_type>0</data_type>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -186,9 +197,6 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
-                    <jmx_endpoint/>
-                    <master_item/>
                 </item>
             </items>
             <discovery_rules>
@@ -198,7 +206,7 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>sbr[&quot;DiscoverTasks&quot;]</key>
-                    <delay>4h</delay>
+                    <delay>240</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -210,6 +218,7 @@
                     <snmpv3_privpassphrase/>
                     <params/>
                     <ipmi_sensor/>
+					<delay_flex/>
                     <authtype>0</authtype>
                     <username/>
                     <password/>
@@ -221,7 +230,7 @@
                         <formula/>
                         <conditions/>
                     </filter>
-                    <lifetime>1w</lifetime>
+                    <lifetime>7</lifetime>
                     <description/>
                     <item_prototypes>
                         <item_prototype>
@@ -230,8 +239,8 @@
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sbr[TaskEndRunTime,{#SYMANTECBACKUP}]</key>
-                            <delay>2h</delay>
-                            <history>1w</history>
+                            <delay>240</delay>
+                            <history>7</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>3</value_type>
@@ -246,6 +255,11 @@
                             <snmpv3_privpassphrase/>
                             <params/>
                             <ipmi_sensor/>
+							<multiplier>0</multiplier>
+							<formula>1</formula>
+							<delta>0</delta>
+							<delay_flex/>
+							<data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -261,10 +275,7 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing/>
-                            <jmx_endpoint/>
                             <application_prototypes/>
-                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Résultat du backup : {#SYMANTECBACKUP}</name>
@@ -272,9 +283,9 @@
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sbr[TaskLastResult,{#SYMANTECBACKUP}]</key>
-                            <delay>20m</delay>
-                            <history>1w</history>
-                            <trends>365d</trends>
+                            <delay>1200</delay>
+                            <history>7</history>
+                            <trends>365</trends>
                             <status>0</status>
                             <value_type>3</value_type>
                             <allowed_hosts/>
@@ -288,6 +299,11 @@
                             <snmpv3_privpassphrase/>
                             <params/>
                             <ipmi_sensor/>
+							<multiplier>0</multiplier>
+							<formula>1</formula>
+							<delta>0</delta>
+							<delay_flex/>
+							<data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -305,10 +321,7 @@
                                 <name>sbrtaskresult</name>
                             </valuemap>
                             <logtimefmt/>
-                            <preprocessing/>
-                            <jmx_endpoint/>
                             <application_prototypes/>
-                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Dernier lancement de la tâche : {#SYMANTECBACKUP}</name>
@@ -316,8 +329,8 @@
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sbr[TaskLastRunTime,{#SYMANTECBACKUP}]</key>
-                            <delay>2h</delay>
-                            <history>1w</history>
+                            <delay>7200</delay>
+                            <history>7</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>3</value_type>
@@ -332,6 +345,11 @@
                             <snmpv3_privpassphrase/>
                             <params/>
                             <ipmi_sensor/>
+							<multiplier>0</multiplier>
+							<formula>1</formula>
+							<delta>0</delta>
+							<delay_flex/>
+							<data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -347,10 +365,7 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing/>
-                            <jmx_endpoint/>
                             <application_prototypes/>
-                            <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
                             <name>Type de backup {#SYMANTECBACKUP}</name>
@@ -358,8 +373,8 @@
                             <snmp_community/>
                             <snmp_oid/>
                             <key>sbr[TaskType,{#SYMANTECBACKUP}]</key>
-                            <delay>4h</delay>
-                            <history>1w</history>
+                            <delay>14400</delay>
+                            <history>7</history>
                             <trends>0</trends>
                             <status>0</status>
                             <value_type>4</value_type>
@@ -374,6 +389,11 @@
                             <snmpv3_privpassphrase/>
                             <params/>
                             <ipmi_sensor/>
+							<multiplier>0</multiplier>
+							<formula>1</formula>
+							<delta>0</delta>
+							<delay_flex/>
+							<data_type>0</data_type>
                             <authtype>0</authtype>
                             <username/>
                             <password/>
@@ -389,68 +409,45 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing/>
-                            <jmx_endpoint/>
                             <application_prototypes/>
-                            <master_item_prototype/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
                             <expression>{Template Symantec BackupExec:sbr[TaskLastResult,{#SYMANTECBACKUP}].last()}&lt;1</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
                             <name>Backup Exec job : {#JOBNAME} en Erreur</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>4</priority>
                             <description/>
                             <type>0</type>
-                            <manual_close>0</manual_close>
                             <dependencies/>
-                            <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
                             <expression>{Template Symantec BackupExec:sbr[TaskLastResult,{#SYMANTECBACKUP}].last()}&gt;1 and {Template Symantec BackupExec:sbr[TaskLastResult,{#SYMANTECBACKUP}].last()}&lt;2</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
                             <name>Backup Exec job {#JOBNAME} en Avertissement</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>2</priority>
                             <description/>
                             <type>0</type>
-                            <manual_close>0</manual_close>
                             <dependencies/>
-                            <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
                             <expression>{Template Symantec BackupExec:sbr[TaskLastResult,{#SYMANTECBACKUP}].nodata(86400)}=1</expression>
-                            <recovery_mode>0</recovery_mode>
-                            <recovery_expression/>
                             <name>Pas de retour d'informations depuis 24h</name>
-                            <correlation_mode>0</correlation_mode>
-                            <correlation_tag/>
                             <url/>
                             <status>0</status>
                             <priority>3</priority>
                             <description/>
                             <type>0</type>
-                            <manual_close>0</manual_close>
                             <dependencies/>
-                            <tags/>
                         </trigger_prototype>
                     </trigger_prototypes>
                     <graph_prototypes/>
                     <host_prototypes/>
-                    <jmx_endpoint/>
                 </discovery_rule>
             </discovery_rules>
-            <httptests/>
             <macros>
                 <macro>
                     <macro>{$VEEAM_MAX_RUNNING_JOB}</macro>
@@ -464,67 +461,43 @@
     <triggers>
         <trigger>
             <expression>{Template Symantec BackupExec:service_state[BackupExecManagementService].last()}&gt;0</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
             <name>Backup Exec Management Service Arrêté</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
             <url/>
             <status>0</status>
             <priority>4</priority>
             <description/>
             <type>0</type>
-            <manual_close>0</manual_close>
             <dependencies/>
-            <tags/>
         </trigger>
         <trigger>
             <expression>{Template Symantec BackupExec:service_state[BackupExecAgentBrowser].last()}&gt;0</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
             <name>Service Backup Exec Agent Browser Arrêté</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
             <url/>
             <status>0</status>
             <priority>4</priority>
             <description/>
             <type>0</type>
-            <manual_close>0</manual_close>
             <dependencies/>
-            <tags/>
         </trigger>
         <trigger>
             <expression>{Template Symantec BackupExec:service_state[BackupExecDeviceMediaService].last()}&gt;0</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
             <name>Service Backup Exec Device &amp; Media Arrêté</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
             <url/>
             <status>0</status>
             <priority>4</priority>
             <description/>
             <type>0</type>
-            <manual_close>0</manual_close>
             <dependencies/>
-            <tags/>
         </trigger>
         <trigger>
             <expression>{Template Symantec BackupExec:service_state[BackupExecJobEngine].last()}&gt;0</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
             <name>Service Backup Exec Job Engine Arrêté</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
             <url/>
             <status>0</status>
             <priority>4</priority>
             <description/>
             <type>0</type>
-            <manual_close>0</manual_close>
             <dependencies/>
-            <tags/>
         </trigger>
     </triggers>
     <value_maps>
