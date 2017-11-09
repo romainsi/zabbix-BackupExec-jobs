@@ -1,6 +1,6 @@
 **================Zabbix-Symantec-Backup-Exec ================**
 
-Work with Symantec Backup Exec V2013 minimum (don't work with 2012 and older) !
+Work with Symantec Backup Exec V2012 minimum (don't work older versions) !
 
 This template use PowerShell Cmdlets to discover backup job Symantec Backup Exec
 
