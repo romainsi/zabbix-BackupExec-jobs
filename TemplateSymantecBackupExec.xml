@@ -412,7 +412,17 @@
                             <application_prototypes/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes>
+					 <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template Symantec BackupExec:sbr[TaskLastResult,{#SYMANTECBACKUP}].last()}=4</expression>
+                            <name>Backup Exec job : {#JOBNAME} Annulé</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <dependencies/>
+                        </trigger_prototype>
                         <trigger_prototype>
                             <expression>{Template Symantec BackupExec:sbr[TaskLastResult,{#SYMANTECBACKUP}].last()}&lt;1</expression>
                             <name>Backup Exec job : {#JOBNAME} en Erreur</name>
