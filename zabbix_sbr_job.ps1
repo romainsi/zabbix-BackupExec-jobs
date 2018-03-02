@@ -24,7 +24,7 @@ $ID = [string]$args[1]
 switch ($ITEM) {
   "DiscoverTasks" {
 $apptasks = Get-BEJob -Jobtype Backup -Status Active
-if (!$apptask) {$apptasks = Get-BEJob -Jobtype Backup -Status Scheduled}
+if (!$apptasks) {$apptasks = Get-BEJob -Jobtype Backup -Status Scheduled}
 $apptasksok1 = $apptasks.Name
 $apptasksok = $apptasksok1.replace('â','&acirc;').replace('à','&agrave;').replace('ç','&ccedil;').replace('é','&eacute;').replace('è','&egrave;').replace('ê','&ecirc;')
 $idx = 1
