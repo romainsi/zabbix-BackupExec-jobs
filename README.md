@@ -40,4 +40,4 @@ EnableRemoteCommands=1 <br>
 UnsafeUserParameters=1 <br>
 UserParameter=sbr[*],powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Program Files\Zabbix Agent\scripts\zabbix_sbr_job.ps1" "$1" "$2"
 4. Import TemplateSymantecBackupExec.xml file into Zabbix.
-5. Associate "Template VEEAM-BACKUP trapper" to the host.
+5. Associate "Template Symantec-Backup-Exec" to the host.
